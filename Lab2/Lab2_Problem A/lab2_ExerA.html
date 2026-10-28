@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Event Page</title>
+</head>
+<body>
+    <header>
+        <h1>Faculty Event</h1>
+        <nav>
+            <ul>
+                <li><a href="#schedule">Event Schedule</a></li>
+                <li><a href="#register">Registration Form</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+            <section id="schedule">
+                <h2>Event Schedule</h2>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Activity</th>
+                            <th>Venue</th>
+                            <th>Person in Charge</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8:00 AM - 9:00 AM</td>
+                            <td>Participant Registration</td>
+                            <td rowspan="2">DSM</td>
+                            <td>Student Committee</td>
+                        </tr>
+                        <tr>
+                            <td>9:00 AM - 10:30 AM</td>
+                            <td>Opening Speech</td>
+                            <td>Dr. Irfan</td>
+                        </tr>
+                        <tr>
+                            <td>10:30 AM - 12:30 PM</td>
+                            <td>Event Ongoing (Part 1)</td>
+                            <td rowspan="2">Lab 1 & Lab 2</td>
+                            <td rowspan="2">Dr. Hakim</td>
+                        </tr>
+                        <tr>
+                            <td>12:30 PM - 2:30 PM</td>
+                            <td>Event Ongoing (Part 2)</td>
+                        </tr>
+                        <tr>
+                            <td>2:30 PM - 3:00 PM</td>
+                            <td colspan="3">Lunch Break</td>
+                        </tr>
+                        <tr>
+                            <td>3:00 PM - 5:00 PM</td>
+                            <td>Project Presentation & Closing Ceremony</td>
+                            <td>DSM</td>
+                            <td>Dr. Rafi</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <br id="register">
+                <h2>Registration Form</h2>
+                <br action="register.html" method="post">
+                    
+                    <p>
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </p>
+
+                    <p>
+                        <label for="matricnum">Matric Number:</label>
+                        <input type="text" id="matricnum" name="matricnum" required>
+                    </p>
+
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" required>
+                    </p>
+
+
+                    
+                    <p>
+                        <label>Year of Study</label><br>
+                        <input type="radio" id="year1" name="year_of_study" value="1">
+                        <label for="year1">Year 1</label></p></br>
+                    
+                        <input type="radio" id="year2" name="year_of_study" value="2">
+                        <label for="year2">Year 2</label></p></br>
+                        
+                        <input type="radio" id="year3" name="year_of_study" value="3">
+                        <label for="year3">Year 3</label></p></br>
+
+                        <input type="radio" id="year4" name="year_of_study" value="4">
+                        <label for="year4">Year 4</label></p></br>
+                    </p>
+
+                    <p>
+                        <label>Select Sessions want to Join:</label><br>
+                        <input type="checkbox" id="session1" name="sessions" value="keynote">
+                        <label for="session1">Programming Workshop</label>
+
+                        <input type="checkbox" id="session2" name="sessions" value="keynote">
+                        <label for="session3">Career Day</label><br>
+
+                        <input type="checkbox" id="session3" name="sessions" value="keynote">
+                        <label for="session3">Hackathon</label>
+                    </p>
+
+                    <p>
+                        <label for="programme">Programme:</label><br>
+                        <select id="programme" name="programme">
+                            <option value="mi">Maritime Informatics</option>
+                            <option value="cs">Mobile Computing</option>
+                            <option value="cs">Software Engineering</option>
+                            <option value="cs">Data Analytics</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <input type="submit" value="Register Now">
+                    </p>
+                </form>
+            </section>
+
+            <section id="about">
+                <h2>About the Event</h2>
+
+                <article>
+                    <h3>Keynote Speaker: Dr. Irfan</h3>
+                    <p>Dr. Irfan Turing will deliver the opening keynote speech on modern artificial intelligence trends and future career paths in computer science.</p>
+                </article>
+
+                <article>
+                    <h3>Activity Highlight: Web Development Hackathon</h3>
+                    <p>Test your skills in real time! Participants will collaborate in groups to build fully semantic HTML forms and interactive applications within 3 hours.</p>
+                </article>
+            </section>
+    </main>
+
+
+</body>
+    
+</html>
