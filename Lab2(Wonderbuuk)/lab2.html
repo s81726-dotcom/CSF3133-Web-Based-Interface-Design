@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile Page</title>
+</head>
+<body>
+
+    <header>
+        <h1>My Personal Profile Page</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#info-table">Personal Information</a></li>
+                <li><a href="#contact-form">Contact Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <article>
+                <h2>About Me</h2>
+                <p>Hello! Welcome to my personal profile page. I am a passionate learner exploring web design and development.</p>
+            </article>
+        </section>
+
+        <section id="info-table">
+            <h2>Personal Details</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Occupation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alex Johnson</td>
+                        <td>24</td>
+                        <td>Software Engineer</td>
+                    </tr>
+                    <tr>
+                        <td>Sarah Smith</td>
+                        <td>28</td>
+                        <td>UX/UI Designer</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Lee</td>
+                        <td>22</td>
+                        <td>Data Analyst</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact-form">
+            <h2>User Registration Form</h2>
+            <form action="#" method="post">
+                <div>
+                    <label for="fullname">Full Name:</label><br>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                <br>
+                
+                <div>
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <br>
+
+                <div>
+                    <label>Gender:</label><br>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br>
+                    
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br>
+                    
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+                <br>
+
+                <div>
+                    <label>Favorite Hobbies:</label><br>
+                    <input type="checkbox" id="coding" name="hobbies" value="coding">
+                    <label for="coding">Coding</label><br>
+                    
+                    <input type="checkbox" id="reading" name="hobbies" value="reading">
+                    <label for="reading">Reading</label><br>
+                    
+                    <input type="checkbox" id="gaming" name="hobbies" value="gaming">
+                    <label for="gaming">Gaming</label>
+                </div>
+                <br>
+
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Personal Profile. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
