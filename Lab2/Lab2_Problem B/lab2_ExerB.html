@@ -1,0 +1,150 @@
+<!--
+ERRORS FOUND AND FIXED:
+Error 1 : Incorrect closing tag </head> instead of </header>.
+Error 2 : Rating column header used <td> instead of <th>.
+Error 3 : Extra opening <tr> tag before the first row.
+Error 4 : Improper colspan="3" on Week 2 data cell (should not span 3 columns in a 3-column table).
+Error 5 : Row 2 missing Rating <td> cell due to incorrect colspan usage.
+Error 6 : Unclosed <td> tag for "Semantic HTML" (used <td> instead of </td>).
+Error 7 : Input id ("fullname") did not match label for attribute ("name").
+Error 8 : Radio buttons had different name attributes ("good" and "poor"), allowing both to be selected simultaneously.
+Error 9 : Radio button and label association/order mixed up for "poor" option.
+Error 10 : Label for attribute ("labs") did not match input id ("lab").
+Error 11 : Typo in closing tag </from> instead of </form>.
+Error 12 : Unescaped ampersand in &copy (missing semicolon, should be &copy;).
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Course Feedback</title>
+</head>
+
+<body>
+<header>
+    <h1>CSF3133 Course Feedback</h1>
+</header>
+
+<nav>
+    <a href="#results">Results</a>
+    <a href="#form">Feedback Form</a>
+    <a href="#comments">Student Comments</a>
+</nav>
+
+<section id="results">
+    <h2>Feedback Summary</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Week</th>
+                <th>Topic</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Introduction to HTML</td>
+                <td>4.5</td>
+            <tr>
+                <td>2</td>
+                <td>Tables and Forms</td>
+                <td>4.2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Semantic HTML</td>
+                <td>4,0</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>4.9</td>
+            </tr>
+            <tr>
+                <td colspan="2">Average Rating</td>
+                <td>4.48</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="form">
+    <h2>Give Your Feedback</h2>
+    <from action="submit_feedback.php" method="post">
+        
+        <p>
+            <label for="fullname">Name:</label><br>
+            <input type="text" id="fullname" name="name">
+        </p>
+
+        <p>
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email">
+        </p>
+
+        <p>
+            <label>Overall rating:</label><br>
+            <input type="radio" id="good" name="rating" value="good">
+            <label for="good">Good</label><br>
+
+            <input type="radio" id="average" name="rating" value="average">
+            <label for="average">Average</label><br>
+
+            <input type="radio" id="poor" name="rating" value="poor">
+            <label for="poor">Poor</label>
+        </p>
+
+        <p>
+            <input type="checkbox" id="lab" name="lab" value="yes">
+            <label for="lab">I attended all labs</label>
+        </p>
+
+        <p>
+            <label>Topics I want more practice on:</label><br>
+            <input type="checkbox" id="topic1" name="practice_topics" value="tables">
+            <label for="topic1">HTML Tables</label><br>
+
+            <input type="checkbox" id="topic2" name="practice_topics" value="forms">
+            <label for="topic2">HTML Forms</label><br>
+
+            <input type="checkbox" id="topic3" name="practice_topics" value="semantic">
+            <label for="topic3">Semantic HTML</label>
+        </p>
+
+        <p>
+            <label for="section">Section / Group:</label><br>
+            <select id="section" name="section">
+                <option value="k1">Group 1 (K1)</option>
+                <option value="k2">Group 2 (K2)</option>
+                <option value="k3">Group 3 (K3)</option>
+            </select>
+        </p>
+
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+</section>
+
+<section id="comments">
+    <h2>Student Comments</h2>
+            
+    <article>
+        <h3>Irfan Ab.Rahman</h3>
+        <p>The lab exercises really helped me understand how to structure tables with rowspan and colspan correctly!</p>
+    </article>
+
+    <article>
+        <h3>Lukman Hakim</h3>
+        <p>Learning form labels and radio button groupings made my web forms much more accessible and functional.</p>
+    </article>
+</section>
+</main>
+
+<footer>
+    <p>Copyright &copy; 2026 CSF3133</p>
+</footer>
+
+</body>
+</html>
