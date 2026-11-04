@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ticket Booking</title>
+</head>
+<body>
+
+<!-- 
+========================================================================
+LIST OF ERRORS FOUND & FIXED FROM GIVEN CODE:
+========================================================================
+Error 1 : Incorrect DOCTYPE declaration. Changed <!DOCTYPE> to <!DOCTYPE html>.
+Error 2 : Mismatched/incorrectly nested tags <h1><span></h1></span>. Corrected to <h1>...<span>...</span></h1>.
+Error 3 : Content container used <span> instead of <div>. Changed <span id="content"> to <div id="content">.
+Error 4 : String concatenation in total tickets oninput. Updated to parseInt(adult.value || 0) + parseInt(child.value || 0).
+Error 5 : Spelling mistake in input type "emial". Corrected to type="email".
+Error 6 : Datalist ID mismatch ("movies" vs "movielist"). Corrected list attribute to list="movielist".
+Error 7 : Invalid range slider attributes min="5" max="1". Corrected to min="1" max="5".
+Error 8 : Incorrect ID reference in output 'for' attribute ("kid" instead of "child"). Corrected to for="adult child".
+Error 9 : Incorrect entity case "&Copy;". Corrected to lower-case "&copy;".
+========================================================================
+-->
+
+    <div id="header">
+        <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+    </div>
+
+    <div id="content">
+        <h2>Book Your Ticket</h2>
+        <p>Promotion: tickets &lt; RM10 for students &amp; staff!</p>
+        
+        <form action="booking.php" oninput="total.value = (parseInt(adult.value) || 0) + (parseInt(child.value) ||
+        0); price.value = ((parseInt(adult.value) || 0) * 12) + ((parseInt(child.value) || 0) * 8)">
+            <p>
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus>
+            </p>
+            <p>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required placeholder="name@domain.com">
+            </p>
+            <p>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="012-3456789" required>
+            </p>
+            <p>
+                <label for="date">Show date: </label>
+                <input type="date" id="date" name="date">
+            </p>
+            <p>
+                <label for="time">Show time: </label>
+                <input type="time" id="time" name="time">
+            </p>
+            <p>
+                <label for="movie">Movie:</label>
+                <input id="movie" name="movie" list="movielist">
+                <datalist id="movielist">
+                    <option value="Space Rangers">
+                    <option value="Kampung Comedy">
+                    <option value="Cyber Odyssey">
+                </datalist>
+            </p>
+            <p>
+                <label for="adult">Adult tickets (RM 12):</label>
+                <input type="number" id="adult" name="adult" min="0" value="0">
+            </p>
+            <p>
+                <label for="child">Child tickets (RM 8):</label>
+                <input type="number" id="child" name="child" min="0" value="0">
+            </p>
+            <p>
+                <label for="rating">Rate our service: </label>
+                <input type="range" id="rating" name="rating" min="1" max="5" value="3">
+            </p>
+            <p>
+                Total tickets: <output name="total" for="adult child">0</output>
+            </p>
+            <p>
+                Total Price (RM): <output name="price" for="adult child">0</output>
+            </p>
+            <p>
+                <input type="submit" value="Book Now">
+            </p>
+        </form>
+    </div>
+
+    <div id="sidebar">
+        <h2>Now Showing</h2>
+        <ul>
+            <li>
+                <strong>Space Rangers</strong> <span>(PG-13)</span> &ndash; <a href="#trailer1">Watch Trailer</a>
+            </li>
+            <li>
+                <strong>Kampung Comedy</strong> <span>(U)</span> &ndash; <a href="#trailer2">Watch Trailer</a>
+            </li>
+            <li>
+                <strong>Cyber Odyssey</strong> <span>(18)</span> &ndash; <a href="#trailer3">Watch Trailer</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="footer">
+        <p>&copy; 2026 CineKampus. All rights reserved.</p>
+        <p>e-Ticket&reg; - Campus Cinema &lt; RM10 every Tuesday &amp; Thursday</p>
+    </div>
+
+</body>
+</html>
