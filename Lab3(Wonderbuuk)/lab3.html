@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Exercise 3 - Interactive Contact Form</title>
+</head>
+
+<body>
+    <div>
+        <h1>Interactive Contact Portal</h1>
+        <span>Welcome to our feedback and calculator page!</span>
+    </div>
+
+    <div>
+        <form>
+            <h2>Contact Us</h2>
+            
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="contact-date">Preferred Contact Date:</label><br>
+            <input type="date" id="contact-date" name="contact-date"><br><br>
+
+            <label for="satisfaction">Satisfaction Level (1-10):</label><br>
+            <input type="range" id="satisfaction" name="satisfaction" min="1" max="10"><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+
+        <div>
+            <h2>Inline Calculator</h2>
+            <form oninput="result.value = parseFloat(num1.value || 0) + parseFloat(num2.value || 0)">
+                <label for="num1">First Number:</label>
+                <input type="number" id="num1" name="num1" value="0">
+                
+                <span>+</span>
+                
+                <label for="num2">Second Number:</label>
+                <input type="number" id="num2" name="num2" value="0">
+                
+                <span>=</span>
+                
+                <output name="result" for="num1 num2">0</output>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <p>Contact Us: s81726@ocean.umt.edu.my | Phone: (+60) 123-4567</p>
+        <p>&copy; 2026 Interactive Contact Form. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
