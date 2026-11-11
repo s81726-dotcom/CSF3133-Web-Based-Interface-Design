@@ -1,0 +1,123 @@
+<!-- 
+========================================================================
+LIST OF ERRORS FOUND & FIXED FROM GIVEN CODE:
+========================================================================
+Error 1 : CSS comment syntax inside <style> tag is incorrect. Used HTML comment instead of CSS comment.
+Error 2 : Invalid CSS property value `list-style-type: no;`. Corrected to `list-style-type: none;`.
+Error 3 : Link states placed out of order (hover declared before visited). Reordered to :link -> :visited -> :hover -> :active so hover works on visited links.
+Error 4 : Invalid CSS property value `text-decoration: overlined;`. Corrected to `text-decoration: overline;`.
+Error 5 : Missing colon syntax in `color #333333;`. Corrected to `color: #333333;`.
+Error 6 : Class selector missing period prefix `highlight`. Corrected to `.highlight`.
+Error 7 : Navigation link href missing target hash tag `href="menu"`. Corrected to `href="#menu"`.
+Error 8 : HTML structure broken. <h2> and <p> elements placed inside <ul> menu list block before closing </ul>. Moved them outside.
+Error 9 : Duplicate ID attribute `id="item"` used on multiple <article> tags. Changed to class `class="item"`.
+Error 10 : Missing `controls` attribute on <video> tag so video cannot be played.
+Error 11 : Invalid MIME type `type="mp4"`. Corrected to `type="video/mp4"`.
+Error 12 : Missing viewport meta tag in head. Added <meta name="viewport" content="width=device-width, initial-scale=1.0">.
+========================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Café Campus</title>
+    
+    <link rel="stylesheet" href="cafe.css">
+    <style type="text/css">
+        h1 { text-decoration: overline; }
+        p { color: #333333; text-align: justify; }
+        .intro {
+            font-size: 18px;
+            background-color: #FDEBD0;
+            padding: 10px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #C0392B;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>e-Café Campus</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="menu">
+        <h2>Today's Menu</h2>
+        <p class="intro">Freshly brewed coffee and local delights every day.</p>
+
+        <article class="item">
+            <h3>Kopi Tarik</h3>
+            <p>Only <span class="old-price">RM 4.50</span> <span class="highlight">RM 3.50</span></p>
+        </article>
+
+        <article class="item">
+            <h3>Nasi Lemak</h3>
+            <p>Only <span class="old-price">RM 6.50</span> <span class="highlight">RM 5.00</span></p>
+        </article>
+    </section>
+
+    <section id="video">
+        <h2>Watch Our Story</h2>
+        <figure>
+            <video width="400" height="300" controls>
+                <source src="cafe.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <figcaption>Behind the scenes at e-Café Campus.</figcaption>
+        </figure>
+    </section>
+
+    <section id="feedback">
+        <h2>Customer Feedback</h2>
+        <form action="#" method="post" class="feedback-form">
+            <p>
+                <label for="fb-name">Name:</label><br>
+                <input type="text" id="fb-name" name="name" required>
+            </p>
+            <p>
+                <label for="fb-email">E-mail:</label><br>
+                <input type="email" id="fb-email" name="email" required>
+            </p>
+            <p>
+                <strong>Visit Type:</strong><br>
+                <input type="radio" id="dine-in" name="visit_type" value="Dine-in">
+                <label for="dine-in">Dine-in</label>
+                <input type="radio" id="take-away" name="visit_type" value="Take-away">
+                <label for="take-away">Take-away</label>
+            </p>
+            <p>
+                <strong>Favourite Items:</strong><br>
+                <input type="checkbox" id="fav-kopi" name="fav_items" value="Kopi Tarik">
+                <label for="fav-kopi">Kopi Tarik</label><br>
+                <input type="checkbox" id="fav-nasi" name="fav_items" value="Nasi Lemak">
+                <label for="fav-nasi">Nasi Lemak</label><br>
+                <input type="checkbox" id="fav-teh" name="fav_items" value="Teh O Ais">
+                <label for="fav-teh">Teh O Ais</label>
+            </p>
+            <p>
+                <input type="submit" value="Submit Feedback">
+            </p>
+        </form>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2026 e-Café Campus</p>
+        <address>
+            Contact Manager: <a href="mailto:manager@ecafe.edu.my">manager@ecafe.edu.my</a>
+        </address>
+    </footer>
+
+</body>
+</html>
