@@ -1,0 +1,67 @@
+<!-- 
+    Error 1 (shop.html, Line 10): <style> tag inside body removed. Styles moved to CSS.
+    Error 2 (shop.html, Line 15-16): Missing closing </a> and </li> tags fixed.
+    Error 3 (shop.html, Line 18): Missing semicolon in style attribute. Style moved to CSS.
+    Error 4 (shop.html, Line 19): Missing </p> closing tag fixed. 
+    Error 5 (shop.html, Line 20): Unquoted id attribute fixed.
+    Error 6 (shop.html, Line 21): <th>Item</th> changed to <th>Title</th>.
+    Error 7-13 (shop.css): Fixed typos in font name, background-image, misplaced CSS rules, and mismatched #products ID selectors.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Campus Bookstore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <header>
+        <h1>Campus Bookstore</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <p>Textbooks, stationery and more for every student.</p>
+        <table id="product">
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Price (RM)</th>
+            </tr>
+            <tr>
+                <td>Web Design Basics</td>
+                <td>Textbook</td>
+                <td>45.00</td>
+            </tr>
+            <tr>
+                <td>A4 Notebook</td>
+                <td>Stationery</td>
+                <td>6.50</td>
+            </tr>
+            <tr>
+                <td>USB Drive 32GB</td>
+                <td>Gadget</td>
+                <td>25.00</td>
+            </tr>
+            <tr>
+                <td>Highlighter Set</td>
+                <td>Stationery</td>
+                <td>9.90</td>
+            </tr>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Campus Bookstore</p>
+    </footer>
+</body>
+</html>
