@@ -1,0 +1,122 @@
+/* Base styling */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FBF7F0;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 1. Header with Background Image */
+header {
+    background-image: url('header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+header p {
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 2. Horizontal Navigation Bar */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #E67E22;
+}
+
+nav li a.active {
+    background-color: #E67E22;
+}
+
+/* 3. Content Section */
+main {
+    width: 90%;
+    max-width: 980px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* 5. Styled Table */
+#stalls-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#stalls-table th, #stalls-table td {
+    border: 1px solid #ddd; 
+    padding: 12px;
+}
+
+#stalls-table th {
+    background-color: #E67E22;
+    color: white;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+#stalls-table tr:nth-child(even) {
+    background-color: #F2F2F2;
+}
+ 
+#stalls-table td:nth-child(4) {
+    text-align: right;
+}
+
+#stalls-table tr:hover {
+    background-color: #FDEBD0;
+}
+
+.right-align {
+    text-align: right !important;
+}
+
+/* 6. Footer */
+footer p{
+    text-align: center;
+    background-color: #EFE6D8;
+    color: #333;
+    padding: 20px;
+    margin-top: 20px;
+}
