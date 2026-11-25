@@ -1,0 +1,179 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f0f3f6; 
+  color: #222;
+}
+
+.main-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #dce4ec;
+  border-radius: 6px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+}
+
+/* HEADER STYLE */
+header {
+  background: #165b8e;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+header h1 { 
+  margin: 0 0 5px; 
+  font-size: 1.5em;
+}
+header p  { 
+  margin: 0; 
+  font-size: 0.9em; 
+}
+
+/* PLAYER SECTION */
+#player-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#player-section label {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+#welcome {
+  font-size: 0.95em;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+input[type="text"] {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9em;
+  width: 150px;
+}
+
+/* BUTTONS */
+button {
+  padding: 6px 14px;
+  background-color: #1f7bb8;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #145a8a;
+}
+
+/* GAME SECTION */
+.choices { 
+  margin-bottom: 20px; 
+}
+.choices button { 
+  margin-right: 8px; 
+}
+
+.arena {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 10px 0 20px 0;
+}
+
+.side { 
+  text-align: center; 
+}
+
+.side p {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.arena img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #7b8e9d;
+  padding: 10px;
+}
+
+.vs {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #555;
+}
+
+/* RESULT SECTION */
+.result-section {
+  min-height: 60px;
+}
+
+#result {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+.scoreboard {
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* HISTORY SECTION */
+.history-section h2 {
+  font-size: 1.1em;
+  margin: 0 0 10px 0;
+}
+
+table#history {
+  border-collapse: collapse;
+  width: 100%;
+  background: #fff;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+table#history th,
+table#history td {
+  border: 1px solid #b7c4d4;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+table#history th {
+  background: #165b8e;
+  color: #fff;
+}
+
+.controls { 
+  margin-top: 10px; 
+}
+.controls button { 
+  margin-right: 10px; 
+}
+
+/* FOOTER SECTION */
+footer {
+  text-align: center;
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 20px;
+}
